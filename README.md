@@ -1,17 +1,85 @@
-# HCI-assignment-prototype-PromptCraft
-Local-first prompt builder with real-time quality scoring and BYOK LLM generation.
+# PromptCraft
 
-Abstract
+> Democratizing AI — a local-first prompt builder that helps everyday users craft high-quality, reproducible AI prompts without needing prompt engineering expertise.
 
-This repository contains the front-end implementation of PromptCraft delivered as a high-fidelity alpha build. In the course context, it serves as the “beta (code submission)” because it is the runnable coded deliverable; however, the system is implemented as a browser-based application without a dedicated backend. The current build completes client-side UI rendering (HTML/CSS/JavaScript), integrates audio and animation feedback using HTML5 Audio/Web Audio and CSS/Web Animations, supports Gemini API request/response rendering for prompt optimization, and includes a quantum-inspired local parallel analysis module to evaluate prompt quality on-device.
+**[Live Demo](https://kong-gif123.github.io/PromptCraft/)**
 
-Entry points 
+![PromptCraft Screenshot](docs/screenshots/home.png)
 
-The repository provides two HTML entry pages for assessment and demonstration. The lab page (visual and audio API test.html) is a standalone implementation focusing on the sound and animation API requirements: users can toggle audio via the sound button at the top-right of the header, and the animation feedback is rendered synchronously to make the interaction observable. The main entry (index.html) presents the complete PromptCraft interactive prototype described in the report, allowing users to experience the end-to-end workflow including the landing page, template library, Gemini API call and optimized prompt rendering, sound control, and clearing locally stored records.
+---
 
-Scope note: this project intentionally runs fully in the browser and does not include a backend service. All interactions, rendering, and local analysis are performed client-side, while Gemini functionality is accessed via API calls from the front end as documented in the report.
+## The Problem
 
-Known issue during testing：
-During our testing, we observed that even when a valid Gemini API key is provided, the generation process may occasionally fail with messages such as “generation failed” or “the model is overloaded, please try again”.
+Most people struggle to get consistent, useful results from AI tools. The quality of AI output depends heavily on how a prompt is written — a skill gap that leaves non-technical users behind.
 
-This issue appears mainly during Gemini peak usage periods and is likely related to the recent release of the Gemini 3 model, which has significantly increased traffic. In most cases, no additional handling is required, as the service resumes normal responses after peak hours. Users with non-free API keys may experience fewer disruptions.
+## What PromptCraft Does
+
+PromptCraft guides users through a structured prompt-building process, lowering the barrier to effective AI use through:
+
+- **Template Library** — professionally designed prompt templates across common use cases
+- **Structured Input** — guided fields that help users construct prompts with the right context, tone, and constraints
+- **Real-time Quality Scoring** — instant feedback on prompt quality using a client-side scoring model
+- **BYOK (Bring Your Own Key)** — users connect their own Google Gemini API key directly in the browser
+- **Lab Mode** — experimental prompt testing and audio/visual generation features
+
+## Privacy by Design
+
+All user data and API keys are stored exclusively in the browser's `localStorage`. No data is transmitted to any server. A one-click **Clear Data** button lets users wipe all local storage at any time.
+
+User's Browser
+│
+├── localStorage (API key, prompt history)
+│
+└── Google Gemini API (direct call, no proxy)
+
+No backend. No tracking. No data collection.
+
+---
+
+## Tech Stack
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Gemini](https://img.shields.io/badge/Google%20Gemini%20API-4285F4?logo=google&logoColor=white)
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Vanilla HTML / CSS / JavaScript |
+| AI Integration | Google Gemini API (client-side) |
+| Audio/Visual | Web Audio API, HTML5 Audio |
+| Storage | Browser localStorage only |
+| Hosting | GitHub Pages |
+
+---
+
+## Getting Started
+
+**No installation required.** Open the live demo directly in your browser:
+
+**[https://kong-gif123.github.io/PromptCraft/](https://kong-gif123.github.io/PromptCraft/)**
+
+To use AI generation features:
+1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create a free Gemini API key
+2. Click the key icon in the top-right corner of PromptCraft
+3. Paste your API key, it is saved locally in your browser only
+4. Start crafting prompts
+
+To run locally:
+```bash
+git clone https://github.com/kong-gif123/PromptCraft.git
+cd PromptCraft
+# Open index.html in your browser
+```
+
+---
+
+## Architecture
+
+![Architecture](Architecture%20diagram-HCI%20Prompt-Craft%20Project.drawio.png)
+
+---
+
+## Project Background
+
+PromptCraft was developed as part of a Human-Computer Interaction course project, with a focus on accessibility and inclusive design in the AI era. The core design philosophy is **technology democratization**, ensuring that the benefits of AI tools are accessible to non-technical users through thoughtful UX and privacy-respecting architecture.
