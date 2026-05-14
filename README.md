@@ -67,7 +67,7 @@ To use AI generation features:
 
 To run locally:
 ```bash
-git clone https://github.com/kong-gif123/PromptCraft.git
+git clone https://github.com/kong-pd/PromptCraft.git
 cd PromptCraft
 # Open index.html in your browser
 ```
