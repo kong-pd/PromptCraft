@@ -2,7 +2,7 @@
 
 > Democratizing AI — a local-first prompt builder that helps everyday users craft high-quality, reproducible AI prompts without needing prompt engineering expertise.
 
-**[Live Demo](https://kong-gif123.github.io/PromptCraft/)**
+**[Live Demo](https://kong-pd.github.io/PromptCraft/)**
 
 ![PromptCraft Screenshot](docs/screenshots/home.png)
 
@@ -57,7 +57,7 @@ No backend. No tracking. No data collection.
 
 **No installation required.** Open the live demo directly in your browser:
 
-**[https://kong-gif123.github.io/PromptCraft/](https://kong-gif123.github.io/PromptCraft/)**
+**[https://kong-pd.github.io/PromptCraft/](https://kong-pd.github.io/PromptCraft/)**
 
 To use AI generation features:
 1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create a free Gemini API key
