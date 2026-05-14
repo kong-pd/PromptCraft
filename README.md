@@ -4,7 +4,7 @@
 
 **[Live Demo](https://kong-pd.github.io/PromptCraft/)**
 
-![PromptCraft Screenshot](docs/screenshots/home.png)
+![PromptCraft Screenshot](docs/screenshots/homepage.png)
 
 ---
 
